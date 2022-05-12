@@ -1,0 +1,186 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* PRIMARY COLORS */
+  --violet: hsl(257, 40%, 49%);
+  --softMagenta: hsl(300, 69%, 71%);
+}
+
+body {
+  background-color: var(--violet);
+}
+
+body p {
+  font-size: 15px;
+  font-weight: 400;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.7;
+  color: white;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  background-color: grey;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* FOR MOBILE SCREENS */
+body {
+  background-image: url(images/bg-mobile.svg);
+  background-repeat: no-repeat;
+}
+
+.logo {
+  width: 50%;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.container {
+  width: 80%;
+  /* margin: 0 auto 3rem auto; */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.image {
+  width: 100%;
+  margin-bottom: 4rem;
+}
+
+.header {
+  font-size: 25px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.description {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.register {
+  display: block;
+  width: 70%;
+  margin: 0 auto 4rem auto;
+  text-align: center;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 400;
+  font-family: "Open Sans", sans-serif;
+  text-decoration: none;
+  color: var(--violet);
+  background-color: white;
+}
+
+.register:hover {
+  background-color: var(--softMagenta);
+  color: white;
+}
+
+.socialMedia {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.socialLink {
+  width: 2rem;
+  height: 2rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 1px solid white;
+  text-decoration: none;
+  margin-right: 0.4rem;
+}
+
+.socialLink:hover {
+  border-color: var(--softMagenta);
+}
+
+.fa-brands {
+  color: white;
+}
+
+.socialLink:hover > .fa-brands {
+  color: var(--softMagenta);
+}
+
+/* FOR DESKTOP SCREENS */
+@media only screen and (min-width: 1440px) {
+  .attribution {
+    background-color: transparent;
+  }
+
+  body {
+    background-image: url(images/bg-desktop.svg);
+  }
+
+  .logo {
+    width: 17%;
+    padding: 3rem 0 0 4rem;
+    margin-bottom: 5rem;
+  }
+
+  .container {
+    width: 100%;
+    /* margin: 0 auto; */
+    flex-direction: row;
+    justify-content: center;
+    gap: 3%;
+    /* align-items: center; */
+    margin-bottom: 2rem;
+  }
+
+  .image {
+    width: 55%;
+    /* margin: 0 2rem 0 4rem; */
+    /* margin-right: 2rem; */
+    padding-left: 4rem;
+    margin-bottom: 0;
+  }
+
+  .content {
+    width: 45%;
+    margin-top: 2.5rem;
+    padding-right: 5rem;
+  }
+
+  .header {
+    width: 72%;
+    text-align: left;
+    font-size: 38px;
+    line-height: 1.5;
+  }
+
+  .description {
+    text-align: left;
+  }
+
+  .register {
+    width: 30%;
+    /* margin: 0 0 10rem 0; */
+    margin: 0;
+  }
+
+  .socialMedia {
+    text-align: right;
+    padding-right: 5rem;
+    margin-bottom: 0;
+  }
+}
